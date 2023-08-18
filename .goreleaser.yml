@@ -1,0 +1,37 @@
+---
+project_name: khulnasoft-proxy
+archives:
+- name_template: "{{.ProjectName}}_{{.Os}}_{{.Arch}}"
+builds:
+- binary: khulnasoft-proxy
+  main: cmd/khulnasoft-proxy/main.go
+  env:
+  - CGO_ENABLED=0
+  goos:
+  - windows
+  - darwin
+  - linux
+  goarch:
+  - amd64
+  - arm64
+release:
+  prerelease: true
+  header: |
+    [Pull Requests](https://github.com/khulnasoftproj/khulnasoft-proxy/pulls?q=is%3Apr+milestone%3A{{.Tag}}) | [Issues](https://github.com/khulnasoftproj/khulnasoft-proxy/issues?q=is%3Aissue+milestone%3A{{.Tag}}) | https://github.com/khulnasoftproj/khulnasoft-proxy/compare/{{.PreviousTag}}...{{.Tag}}
+signs:
+- cmd: cosign
+  artifacts: checksum
+  signature: ${artifact}.sig
+  certificate: ${artifact}.pem
+  output: true
+  env:
+  - COSIGN_EXPERIMENTAL=1
+  args:
+  - sign-blob
+  - --output-signature
+  - ${signature}
+  - --output-certificate
+  - ${certificate}
+  - --oidc-provider
+  - github
+  - ${artifact}
