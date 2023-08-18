@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "config:base",
+    "github>khulnasoftproj/khulnasoft-renovate-config#1.8.0",
+    "github>khulnasoftproj/khulnasoft-renovate-config:file#1.8.0(khulnasoft/.*\\.ya?ml)",
+    "github>sulaiman-coder/renovate-config#2.1.0",
+    "github>sulaiman-coder/renovate-config:nolimit#2.1.0",
+    "github>sulaiman-coder/renovate-config:action-go-version#2.1.0",
+  ],
+}
