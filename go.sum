@@ -1,0 +1,4 @@
+github.com/sulaiman-coder/go-error-with-exit-code v1.0.0 h1:EMqj629gROuQQfCj+CgpWbFknMh2nwTf0+IYuseLfuc=
+github.com/sulaiman-coder/go-error-with-exit-code v1.0.0/go.mod h1:jiPldzEYgjnRcezuX+EgHNcb/vLiSh1eQ0prHhrsSOg=
+golang.org/x/sys v0.11.0 h1:eG7RXZHdqOJ1i+0lgLgCpSXAp6M3LYlAo6osgSi0xOM=
+golang.org/x/sys v0.11.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
